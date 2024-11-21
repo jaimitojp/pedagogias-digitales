@@ -1,0 +1,253 @@
+* {/*    "*" para darle estilos a cosas en general de toda la pagina    */
+    margin: 0;/* margin: 0 para que la pagina no tenga margenes a los lados */
+    padding: 0;/*  padding: 0 para que no hallan espacios internos dentro y fuera de la pagina a menos que se especifique en una parte del codigo css*/
+    box-sizing: border-box;
+    list-style: none;/* para que no salgan los puntos en las listas desordenadas*/
+}
+
+body {
+    font-family: cursive; /*para colocar un tipo de letra, en este caso le pusimos un tipo de letra cursiva*/
+    background-color: #000;/* un fondo de color negro para el cuerpo de la pagina*/
+    color: #fff;/* color de la letra en blanco*/
+    line-height: 1.4;/* para que el texto sea facil de leer le colocamos un espaciado de 1.4*/
+    padding-top: 80px;/* para un margen interno hacia abajo*/
+}
+  
+
+/*  nav del menu de la pagina web */
+nav {
+    position: fixed;/* para que el menu baje cuando el usuario va bajando por la pagina web*/
+    top: 0;/* no sube ni se cmabia de posicion*/
+    width: 1400px;/*hancho del menu*/
+    height: auto;/*un alto que se adapta dependiendo de las cosas que estan dentro del nav*/
+    background: rgba(34, 34, 34, 0.13);/* un color oscuro pero opacado para que se vea la informacion cuando bajan por la pagina*/
+    padding: 10px 20px;
+    display: flex;/*para hacerlo flexible y poder modificar su posicionamiento*/
+    justify-content: center;/* se justifica el contenido en el centro*/
+    text-shadow: 0 0 10px #00ffff,/*colores al rededor de las letras para dar la impresion de un color neon*/
+                 0 0 20px #00ffff,
+                 0 0 40px #00ffff,
+                 0 0 80px #00ffff,
+                 0 0 100px #55ecec;
+                 box-shadow: 0 0 5px;/*una sombra de 5 pixeles debajo del nav*/
+}
+nav .imagen{/*para editar el logo que esta en el menu*/
+    height: 75px;;
+    width: 90px;
+    margin-right: 100px;/*margen para que la imagen se coloce hacia la derecha 100pixeles*/
+    max-width: 80px; /*un ancho maximo de 80 pixeles para que no dañe el tamaño del menu*/
+    border-radius: 50%; /*para hacer que la imagen tome una forma redondeada*/
+    object-fit: cover; 
+    border: 2px solid #fff; /*para darle un borde a la imagen y no se vea plana al quitar el fondo*/
+    mix-blend-mode: color-burn;/*para quitar el fondo de la imagen*/
+}
+
+
+
+nav a {/*para darle estilos a los hipervinculos del menu*/
+    color: #fff;/*color de la letra en blanco*/
+    text-decoration: none;/*para quitar valores especiales en el texto que no sean de caracter alfanumerico*/
+    margin: 0 15px;/*margen de 5pixeles entre cada seccion*/
+    font-size: 1.2em;/*tamaño de la letra (EM es un siste ma de medida)*/
+    transition: color 0.3s ease;/*transicion cuando se pasa el cursosr del mouse sobre las letras*/
+}
+
+nav a:hover {
+    color: #00ffff;/*color que tomara el texto cuando se coloca el cursor sobre el texto*/
+}
+
+h1{/*estilos en el titulo de la pagian*/
+    text-align: center;/*texto centrado*/
+    text-transform: uppercase;
+    color: rgb(250, 240, 240);/*color de la letra en blanco*/
+    font-size: 4em;/*tamaño de la letra*/
+    letter-spacing: 10px;/*espacios entre las letras*/
+    text-shadow: 0 0 10px #00ffff,/*para simular un color azul neon al rededor de las letras*/
+                 0 0 20px #00ffff,
+                 0 0 40px #00ffff,
+                 0 0 80px #00ffff,
+                 0 0 100px #55ecec;
+                 margin-top: 50px;/*para poner un margen de 50pixeles hacia abajo*/
+}
+
+h2, h3, h4{/*estilos en los subtitulos*/
+    text-transform: uppercase;
+    text-align: center;/*texto centrado*/
+    font-size: 30px;/*tamaño de la letra de 30pixeles*/
+    color: rgb(255, 255, 255);/*color de la letra en blanco*/
+    letter-spacing: 1px;/*espacio entre las letras de 1pxel*/
+    text-shadow: 0 0 10px #00ffff,/*para simular un color azul neon*/
+                 0 0 15px #00ffff,
+                 0 0 30px #00ffff,
+                 0 0 60px #00ffff,
+                 0 0 100px #55ecec;
+}
+
+footer h2,h3{/*para darle estilo a los subtitulos de el pie de pagina*/
+    color:  #00ffff;/*color de la letra en azul*/
+}
+
+.informacion {/*para dale estilos a la clase "informacion"*/
+    max-width: 1200px;/*ancho maximo de 1200pixeles*/
+    margin: auto;/*un margen automatico*/
+    padding: 20px;/*un borde imaginaro de 20pixeles*/
+}
+
+/*par darles estilos a las clases que estan dentro de de la clase "informacion"*/
+.tema-principal, .nuevo-metodo, .caracteristicas, .retos, .herramientas, .tipos_educacion, .sincronica, .asincronica, .mixta, .autoguiada, .en_vivo {
+    background: #f0f8ff;/*fondo de color blanco*/
+    color: #000;/*color de la letra*/
+    margin: 20px 0;/*un margen en los costados de la pagina web*/
+    padding: 20px;/*margen imaginario de 20pixeles*/
+    border-radius: 10px;/*para quitarle los bordes y no se vea tan afilados las esquinas de los contenedores*/
+    box-shadow: 0 0 5px #00ffff,/*color alrededor de los contenedores*/
+                0 0 10px #00ffff,
+                0 0 20px #00ffff,
+                0 0 40px #00ffff; 
+    animation: glowing-effect 2s infinite; /* Aplica la animación en un lapso de tiempo infinito */
+}
+
+/* Animación del efecto de luz para que de la inpresion de que se enciende y se apaga la luz*/
+@keyframes glowing-effect {
+    0% {
+        box-shadow: 0 0 5px #00ffff, 
+                    0 0 10px #00ffff, 
+                    0 0 20px #00ffff, 
+                    0 0 40px #00ffff; 
+    }
+    50% {
+        box-shadow: 0 0 15px #00ffff, 
+                    0 0 30px #00ffff, 
+                    0 0 60px #00ffff, 
+                    0 0 80px #00ffff; 
+    }
+    100% {
+        box-shadow: 0 0 5px #00ffff, 
+                    0 0 10px #00ffff, 
+                    0 0 20px #00ffff, 
+                    0 0 40px #00ffff; 
+    }
+}
+
+
+
+.tema-principal p, .nuevo-metodo p {
+    font-size: 1.1em;/*tamaño de la letra*/
+}
+
+
+footer {/*pie de pagina*/
+    background: rgba(34, 34, 34, 0.8);/*fondo de color negro*/
+    color: #fff;/*color de la letra en blanco*/
+    padding: 20px 10px;/*borde imaginario en el alto y el ancho*/
+    text-align: center;/*texto centrado*/
+}
+
+
+footer .pie-pagina {/*pie de pagina en la clase pie-pagina*/
+    display: flex;/*para poder ajustar el posicionamiento de la clase*/
+    justify-content: space-between; /*espacios entre el contenido*/
+    align-items: center; /*para centrar los items*/
+    flex-wrap: wrap; 
+    max-width: 1200px; /*un ancho maximo de 1200pixeles*/
+    margin: 0 auto; /*margen */
+    gap: 20px; /*para no usar un margen adicional se usa gap en los elementos hijos*/
+}
+
+
+.footer-section {
+    flex: 1; 
+    text-align: center;/*texto centrado*/
+    padding: 10px;/*margen imaginario de 10pixeles*/
+}
+
+
+.footer-section figure {
+    display: flex;
+    justify-content: center;/*texto centrado*/
+    align-items: center;/*items centrados*/
+}
+
+.footer-section img {
+    max-width: 100px; /*ancho maximo 100pixeles*/
+    height: 100px; /*height de 100pixeles*/
+    border-radius: 50%; /*para que la imagen tomo una forma redonda*/
+    object-fit: cover; 
+    border: 2px solid #fff; /*un borde de color blanco*/
+}
+
+
+footer h2, footer h3 {/*h2 y h3 en el pie de pagina*/
+    margin: 10px 0;/*margen de 10pixeles*/
+    font-size: 1.5em;/*tamaño de la letra de 1.5em*/
+}
+
+footer p {/*texto en el pie de pagina*/
+    font-size: 1em;/*tamaño de la letra*/
+    margin: 10px 0;/*margen en 10pixeles*/
+    line-height: 1.5;/*espacio entre las lineas*/
+}
+
+footer ul {/*lista en el pie de pagina*/
+    list-style: none;/*la liata no tendra valores especiales*/
+    padding: 0;/*margen imaginario en 0*/
+}
+
+footer ul li {/*lista de integrantes en el pie de pagina*/
+    text-decoration: none;/*sin decoracion en el texto*/
+    margin: 5px 0;/*margen de 5pixeles*/
+}
+
+
+/*para hacer la pagina responcive de el pie de pagina*/
+@media (max-width: 768px) {
+    .pie-pagina {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px; 
+    }
+
+    footer img {
+        max-width: 80px; 
+    }
+}
+
+section {
+    padding: 100px;
+    margin-top: 50px;
+    height: auto;
+  }
+
+/* Degradado mejorado para cada sección */
+#section1 {
+    background: linear-gradient(to bottom, #FFADAD, #FF8989, #FF7070, #FF5656); /* Rosa pastel */
+}
+
+#section2 {
+    background: linear-gradient(to bottom, #FFD6A5, #FFC085, #FFA573, #FF8A5B); /* Naranja melocotón */
+}
+
+#section3 {
+    background: linear-gradient(to bottom, #FDFFB6, #E8F597, #D4EC7D, #C0E366); /* Amarillo suave */
+}
+
+#section4 {
+    background: linear-gradient(to bottom, #CAFFBF, #A8EAA1, #8CD688, #6FC26D); /* Verde menta claro */
+}
+
+#section5 {
+    background: linear-gradient(to bottom, #9BF6FF, #73E8FF, #53D4F2, #35C1E0); /* Azul cielo */
+}
+
+#section6, #section7 {
+    background: linear-gradient(to bottom, #A0C4FF, #7FA8F0, #5F8CDF, #3F6FCF); /* Azul lavanda */
+}
+
+
+
+html {
+    scroll-behavior: smooth; /*para que cuando se presione algun hipervinculo hacer que baje de una forma mas agradable*/
+  }
